@@ -18,7 +18,7 @@ db.authenticate()
         console.error('Unable to connect to the database:', err);
     });
 
-//moddleware to fetching incoming request body
+//middleware to fetching incoming request body
 app.use(express.json());
 //logging request to console for debug purpose
 app.use(logger);
@@ -33,6 +33,5 @@ app.use((req,res,next)=>{
     res.status(404).json({message:"the requested Resources not Found on server",err:'404'})
 })
 
-
-
+// server listeing on pre-defined port 
 app.listen(port, console.log(`server running on port ${port}`));
