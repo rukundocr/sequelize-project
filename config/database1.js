@@ -1,10 +1,10 @@
 const { STRING } = require('sequelize');
 const Sequelize = require('sequelize');
 module.exports = new Sequelize(
-    process.env.DB,
-    process.env.user, 
-    process.env.password, {
-    host:process.env.host,
+    'Students_DB',
+     'postgres',
+      '505050jr', {
+    host: 'localhost',
     dialect: 'postgres',
     operatorsAliases: false,
 
